@@ -1,6 +1,1 @@
-Traceback (most recent call last):
-  File "get_spectrogram.py", line 4, in <module>
-    from utils import Standardizer
-  File "preprocessing/utils.py", line 6, in <module>
-    from tqdm import tqdm
-ImportError: No module named tqdm
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|9         | 1/11 [00:02<00:21,  2.17s/it] 18%|#8        | 2/11 [00:03<00:17,  1.98s/it] 27%|##7       | 3/11 [00:05<00:15,  1.97s/it] 36%|###6      | 4/11 [00:07<00:13,  1.98s/it] 45%|####5     | 5/11 [00:10<00:12,  2.05s/it] 55%|#####4    | 6/11 [00:12<00:10,  2.09s/it] 64%|######3   | 7/11 [00:14<00:08,  2.11s/it] 73%|#######2  | 8/11 [00:16<00:06,  2.12s/it] 82%|########1 | 9/11 [00:19<00:04,  2.13s/it] 91%|######### | 10/11 [00:21<00:02,  2.15s/it]100%|##########| 11/11 [00:23<00:00,  2.14s/it]

@@ -1,0 +1,29 @@
+  0%|          | 0/11 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "get_spectrogram.py", line 52, in <module>
+    fire.Fire({'run': e.iter_get_spectrogram})
+  File "/usr/local/lib/python2.7/dist-packages/fire/core.py", line 127, in Fire
+    component_trace = _Fire(component, args, context, name)
+  File "/usr/local/lib/python2.7/dist-packages/fire/core.py", line 366, in _Fire
+    component, remaining_args)
+  File "/usr/local/lib/python2.7/dist-packages/fire/core.py", line 542, in _CallCallable
+    result = fn(*varargs, **kwargs)
+  File "get_spectrogram.py", line 47, in iter_get_spectrogram
+    spec = self.get_spectrogram(fn)
+  File "get_spectrogram.py", line 24, in get_spectrogram
+    X = self.ap.mel(self.ap.forward(self.ap.load(fn)), logamp=True)
+  File "preprocessing/audio.py", line 26, in load
+    return librosa.load(fn, sr=self.sr, mono=self.mono)[0]
+  File "/usr/local/lib/python2.7/dist-packages/librosa/core/audio.py", line 126, in load
+    for frame in input_file:
+  File "/usr/local/lib/python2.7/dist-packages/audioread/ffdec.py", line 181, in read_data
+    ''.join(self.stderr_reader.queue.queue)
+audioread.ffdec.ReadTimeoutError: ffmpeg output: Output #0, s16le, to 'pipe:':
+  Metadata:
+    encoder         : Lavf56.40.101
+    Stream #0:0: Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s
+    Metadata:
+      encoder         : Lavc56.60.100 pcm_s16le
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+size=      58kB time=00:00:00.31 bitrate=1536.0kbits/s    size=      63kB time=00:00:00.33 bitrate=1536.0kbits/s    size=      68kB time=00:00:00.36 bitrate=1536.0kbits/s    size=     112kB time=00:00:00.60 bitrate=1536.0kbits/s    size=     117kB time=00:00:00.62 bitrate=1536.0kbits/s    size=     122kB time=00:00:00.64 bitrate=1536.0kbits/s    size=     130kB time=00:00:00.69 bitrate=1536.0kbits/s    size=     135kB time=00:00:00.72 bitrate=1536.0kbits/s    size=     140kB time=00:00:00.74 bitrate=1536.0kbits/s    size=     148kB time=00:00:00.79 bitrate=1536.0kbits/s    size=     153kB time=00:00:00.81 bitrate=1536.0kbits/s    size=     158kB time=00:00:00.84 bitrate=1536.0kbits/s    size=     162kB time=00:00:00.86 bitrate=1536.0kbits/s    size=     166kB time=00:00:00.88 bitrate=1536.0kbits/s    size=     171kB time=00:00:00.91 bitrate=1536.0kbits/s    size=     176kB time=00:00:00.93 bitrate=1536.0kbits/s    size=     198kB time=00:00:01.05 bitrate=1536.0kbits/s    size=     720kB time=00:00:03.84 bitrate=1536.0kbits/s    size=     724kB time=00:00:03.86 bitrate=1536.0kbits/s    size=     729kB time=00:00:03.88 bitrate=1536.0kbits/s    size=     734kB time=00:00:03.91 bitrate=1536.0kbits/s    size=     738kB time=00:00:03.93 bitrate=1536.0kbits/s    size=     742kB time=00:00:03.96 bitrate=1536.0kbits/s    size=     747kB time=00:00:03.98 bitrate=1536.0kbits/s    size=     756kB time=00:00:04.03 bitrate=1536.0kbits/s    size=     760kB time=00:00:04.05 bitrate=1536.0kbits/s    size=     765kB time=00:00:04.08 bitrate=1536.0kbits/s    size=     770kB time=00:00:04.10 bitrate=1536.0kbits/s    size=     774kB time=00:00:04.12 bitrate=1536.0kbits/s    size=    1926kB time=0

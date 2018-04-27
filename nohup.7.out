@@ -1,6 +1,1 @@
-Traceback (most recent call last):
-  File "get_spectrogram.py", line 4, in <module>
-    from utils import Standardizer
-  File "preprocessing/utils.py", line 6, in <module>
-    from tqdm import tqdm
-ImportError: No module named tqdm
+  0%|          | 0/11 [00:00<?, ?it/s]
