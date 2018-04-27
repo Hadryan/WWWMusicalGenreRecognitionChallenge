@@ -94,7 +94,7 @@ class Transfer:
 		num_chunk = (X.shape[0]-43)/10
 		spectrograms = []
 		for i in range(num_chunk):
-			spectrograms.append(X[num_chunk*10:num_chunk*10+43].reshape(1,43,128))
+			spectrograms.append(X[i*10:i*10+43].reshape(1,43,128))
 		spectrograms = np.array(spectrograms)
 		spectrograms = self.sclr.transform_batch(spectrograms)
 		spectrograms = spectrograms.transpose(0,3,2,1)
