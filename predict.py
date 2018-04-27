@@ -87,21 +87,12 @@ class Transfer:
 		self.model_ultimate.load_weights(self.ultimate_path)
 
 	def get_filelist(self):
-		self.filelist = glob.glob(os.path.join(self.audio_path, '*.mp3'))
+		self.filelist = glob.glob(os.path.join(self.audio_path, '*.npy'))
 
-	def get_spectrogram(self, fn):
-		X = self.ap.mel(self.ap.forward(self.ap.load(fn)), logamp=True)
-		num_chunk = (X.shape[0]-43)/10
-		spectrograms = []
-		for i in range(num_chunk):
-			spectrograms.append(X[i*10:i*10+43].reshape(1,43,128))
-		spectrograms = np.array(spectrograms)
-		spectrograms = self.sclr.transform_batch(spectrograms)
-		spectrograms = spectrograms.transpose(0,3,2,1)
-		return spectrograms
+
 		
 	def get_features(self, fn):
-		spectrograms = self.get_spectrogram(fn)
+		spectrograms = np.load(fn)
 		feat_c = self.ff_c([spectrograms, 0])[0]
 		feat_d = self.ff_d([spectrograms, 0])[0]
 		feat_e = self.ff_e([spectrograms, 0])[0]
