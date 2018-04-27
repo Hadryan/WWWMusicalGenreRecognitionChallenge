@@ -34,9 +34,10 @@ class Extract:
 	def iter_get_spectrogram(self, iter_idx="0"):
 		for fn in tqdm.tqdm(self.filelist):
 			if fn[-5] == str(iter_idx):
-				spec = self.get_spectrogram(fn)
 				new_fn = fn[:-3] + 'npy'
-				np.save(open(new_fn, 'wb'), spec)
+				if not os.path.exists(new_fn):
+					spec = self.get_spectrogram(fn)
+					np.save(open(new_fn, 'wb'), spec)
 
 if __name__ == '__main__':
 	e = Extract()
