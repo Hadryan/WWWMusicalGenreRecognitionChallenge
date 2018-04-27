@@ -11,7 +11,7 @@ LIM=1
 while true
 	do echo "checking"
 	NUMJOB=$(pgrep python | wc -l)
-	if [ "$NUMJOB" -gt "$LIM" ];
+	if [ "$NUMJOB" -ge "$LIM" ];
 		then echo "[$(NUMJOB)] jobs are ongoing [$(date)]"
 		sleep 10
 	else
