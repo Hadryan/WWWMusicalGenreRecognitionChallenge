@@ -1,1 +1,6 @@
-  0%|          | 0/388 [00:00<?, ?it/s]100%|##########| 388/388 [00:00<00:00, 1062958.82it/s]
+Traceback (most recent call last):
+  File "get_spectrogram.py", line 4, in <module>
+    from utils import Standardizer
+  File "preprocessing/utils.py", line 6, in <module>
+    from tqdm import tqdm
+ImportError: No module named tqdm
