@@ -12,7 +12,7 @@ while true
 	do echo "checking"
 	NUMJOB=$(pgrep python | wc -l)
 	if [ "$NUMJOB" -gt "$LIM" ];
-		then echo "[$(NUMBJOB)] jobs are ongoing [$(date)]"
+		then echo "[$(NUMJOB)] jobs are ongoing [$(date)]"
 		sleep 10
 	else
 		echo "start training [$(date)]"
